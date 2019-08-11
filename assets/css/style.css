@@ -27,3 +27,22 @@ body {
     margin: 0 auto;
     text-align: center;
 }
+
+#functions-box {
+    width: 33%;
+    height: 100px;
+    margin: 0 auto;
+    border: 1px solid yellow;
+}
+
+#computerchoice-text {
+    width: 60%;
+    height: 100%;
+    background: darkblue;
+    color: white;
+    border: 1px solid red;
+    text-align: center;
+    padding-top: 35px;
+    font-size: 75px;
+    float: left;
+}
