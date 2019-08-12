@@ -4,6 +4,7 @@ body {
     line-height: 20px;
     background: lightblue;
     margin: 0 auto;
+    background-image: url("../images/morocco-blue.png")
 }
 
 * {
@@ -32,17 +33,66 @@ body {
     width: 33%;
     height: 100px;
     margin: 0 auto;
-    border: 1px solid yellow;
+    
 }
 
 #computerchoice-text {
-    width: 60%;
+    width: 55%;
     height: 100%;
     background: darkblue;
     color: white;
-    border: 1px solid red;
     text-align: center;
     padding-top: 35px;
     font-size: 75px;
     float: left;
+    display: inline;
+}
+
+#score-box {
+    float: left;
+    width: 40%;
+    height: 100%;
+    background: skyblue;
+    display: inline;
+    margin-left: 20px;
+}
+
+#crystal-box {
+    clear: both;
+    height: 200px;
+    width: 980px;
+    border: 2px solid black;
+    margin: 0 auto;
+    float: left;
+}
+#bluecrystal {
+    border: 2px solid yellow;
+    background-image: url("../images/bluecrystal.png");
+    float: left;
+    height: 200px;
+    width: 25%;
+}
+
+#greencrystal {
+    border: 2px solid rgb(233, 110, 9);
+    background-image: url("../images/greencrystal.png");
+    float: left;
+    height: 200px;
+    width: 25%;
+}
+
+#orangecrystal {
+    border: 2px solid rgb(22, 71, 231);
+    background-image: url("../images/orangecrystal.png");
+    float: left;
+    height: 200px;
+    width: 25%;
+}
+
+#purplecrystal {
+    border: 2px solid rgb(26, 173, 75);
+    background-image: url("../images/purplecrystal.png");
+    float: left;
+    height: 200px;
+    width: 25%; 
 }
