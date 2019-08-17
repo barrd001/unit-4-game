@@ -4,7 +4,8 @@ body {
     line-height: 20px;
     background: lightblue;
     margin: 0 auto;
-    background-image: url("../images/morocco-blue.png")
+    background-image: url("../images/morocco-blue.png");
+    width: 100%;
 }
 
 * {
@@ -36,7 +37,7 @@ body {
     
 }
 
-#computerchoice-text {
+#numbertoguess-text {
     width: 55%;
     height: 100%;
     background: darkblue;
@@ -46,6 +47,7 @@ body {
     font-size: 75px;
     float: left;
     display: inline;
+    border: 1px solid green;
 }
 
 #score-box {
@@ -59,40 +61,67 @@ body {
 
 #crystal-box {
     clear: both;
-    height: 200px;
-    width: 980px;
-    border: 2px solid black;
-    margin: 0 auto;
-    float: left;
+    height: 20px;
+    width: 980px; 
+    padding-left: 200px;
 }
-#bluecrystal {
-    border: 2px solid yellow;
-    background-image: url("../images/bluecrystal.png");
-    float: left;
-    height: 200px;
-    width: 25%;
+#redcrystal {
+    
+    height: 100px;
+    width: 20%;
+    overflow: hidden;
+    float: right;
 }
 
 #greencrystal {
-    border: 2px solid rgb(233, 110, 9);
-    background-image: url("../images/greencrystal.png");
-    float: left;
-    height: 200px;
-    width: 25%;
+    height: 100px;
+    width: 20%;
+    float: right;
+    overflow: hidden;
 }
 
 #orangecrystal {
-    border: 2px solid rgb(22, 71, 231);
-    background-image: url("../images/orangecrystal.png");
-    float: left;
-    height: 200px;
-    width: 25%;
+    height: 100px;
+    width: 20%;
+    float: right;
+    overflow: hidden;
 }
 
 #purplecrystal {
-    border: 2px solid rgb(26, 173, 75);
-    background-image: url("../images/purplecrystal.png");
-    float: left;
+    height: 100px;
+    width: 20%;
+    float: right;
+    overflow: hidden;
+}
+
+img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+#score {
+    margin-top: 20px;
+}
+
+h2 {
+    clear: both;
+    height: 20px;
+    width: 300px;
+    background: rgb(11, 108, 133);
+    color: white;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 50px;
+}
+
+#total-score {
+    background: rgb(11, 108, 133);
     height: 200px;
-    width: 25%; 
+    width: 300px;
+    color: white;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 50px;
 }
