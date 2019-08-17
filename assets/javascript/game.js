@@ -36,9 +36,12 @@ function startGame() {
     purpleValue();
 }
 
+$("#redcrystal").on('click', function(e) {
+    return totalScore = totalScore + redGem;
+});
 
 $("#numbertoguess-text").text(randomChoice);
-// $("#wins-text").text(otherNumber(120, 19));
+$("#totalscore-text").text(totalScore);
 
 console.log(randomChoice);
 console.log(redGem);
