@@ -32,7 +32,7 @@ body {
 
 #functions-box {
     width: 33%;
-    height: 100px;
+    height: 200px;
     margin: 0 auto;
     
 }
@@ -43,7 +43,7 @@ body {
     background: darkblue;
     color: white;
     text-align: center;
-    padding-top: 35px;
+    padding-top: 75px;
     font-size: 75px;
     float: left;
     display: inline;
@@ -66,7 +66,6 @@ body {
     padding-left: 200px;
 }
 #redcrystal {
-    border: 1px solid red;
     height: 100px;
     width: 20%;
     overflow: hidden;
@@ -116,7 +115,7 @@ h2 {
 
 #totalscore-text {
     background: rgb(11, 108, 133);
-    height: 200px;
+    height: 100px;
     width: 300px;
     color: white;
     margin: 0 auto;

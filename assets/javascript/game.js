@@ -43,20 +43,22 @@ function startGame() {
     $("#totalscore-text").text(totalScore);
 }
 
-// call the start game in the beginnig 
+// call the start game in the beginning 
 startGame()
 
 
 function win(){
     wins++;
-    alert("You got it!");
+    $("#winlose-text").text("You got it!");
+    $('#wins-text').text("Wins: " + wins);
     startGame();
 }
 
 
-function loose(){
+function lose(){
     losses++;
-    alert("You lose!");
+    $("#winlose-text").text("You missed it!");
+    $('#losses-text').text('Losses: ' + losses);
     startGame();
 }
 
@@ -72,7 +74,7 @@ $('.crystal').click( function(event) {
     }
     if(totalScore > randomChoice){ 
         // call loose function
-        loose()
+        lose()
     }
 
     $("#totalscore-text").text(totalScore);
