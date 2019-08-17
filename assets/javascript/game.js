@@ -7,44 +7,149 @@ function numberToGuess(max, min) {
 };
 
 function redValue() {
-    return Math.floor((Math.random() * 12 + 1));
+    let val = Math.floor((Math.random() * 12 + 1));
+    $("#redcrystal").attr('value', val)
+    return val 
 };
 
 function greenValue() {
-    return Math.floor((Math.random() * 12 + 1));
+    let val = Math.floor((Math.random() * 12 + 1));
+    $("#greencrystal").attr('value', val)
+    return val 
 }
 
 function orangeValue() {
-    return Math.floor((Math.random() * 12 + 1));
+    let val =  Math.floor((Math.random() * 12 + 1));
+    $('#orangecrystal').attr('value', val)
+    return val 
 }
 
 function purpleValue() {
-    return Math.floor((Math.random() * 12 + 1));
+    let val =  Math.floor((Math.random() * 12 + 1));
+    $('#purplecrystal').attr('value', val)
+    return val 
 }
 
-var randomChoice = numberToGuess(120, 19);
-var redGem = redValue();
-var greenGem = greenValue();
-var orangeGem = orangeValue(); 
-var purpleGem = purpleValue();
+
 
 function startGame() {
-    numberToGuess(120, 19);
-    redValue();
-    greenValue();
-    orangeValue();
-    purpleValue();
+    randomChoice = numberToGuess(120, 19);
+    redGem = redValue();
+    greenGem = greenValue();
+    orangeGem = orangeValue();
+    purpleGem = purpleValue();
+    totalScore = 0
+    $("#numbertoguess-text").text(randomChoice);
+    $("#totalscore-text").text(totalScore);
 }
 
-$("#redcrystal").on('click', function(e) {
-    return totalScore = totalScore + redGem;
+// call the start game in the beginnig 
+startGame()
+
+
+function win(){
+    wins++;
+    alert("You got it!");
+    startGame();
+}
+
+
+function loose(){
+    losses++;
+    alert("You lose!");
+    startGame();
+}
+
+// event listener on a class
+$('.crystal').click( function(event) {
+    value = $(this).attr('value')
+    console.log(value)
+    totalScore = parseInt(totalScore) + parseInt(value)
+
+    if(totalScore == randomChoice){ 
+        // call win function
+        win()
+    }
+    if(totalScore > randomChoice){ 
+        // call loose function
+        loose()
+    }
+
+    $("#totalscore-text").text(totalScore);
+})
+
+/* 
+
+$("#redcrystal").on('click', function() {
+    totalScore = totalScore + redGem;
+    if (totalScore === randomChoice) {
+        wins++;
+        alert("You got it!");
+        startGame();
+    } else if (totalScore > randomChoice) {
+        losses++;
+        alert("You lose!");
+        startGame();
+    };
+    console.log(totalScore);
+    $("#totalscore-text").text(totalScore);
+
 });
 
-$("#numbertoguess-text").text(randomChoice);
-$("#totalscore-text").text(totalScore);
+$("#greencrystal").on('click', function() {
+    totalScore = totalScore + greenGem;
+    if (totalScore === randomChoice) {
+        wins++;
+        alert("You got it!");
+        startGame();
+    } else if (totalScore > randomChoice) {
+        losses++;
+        alert("You lose!");
+        startGame();
+    };
+    console.log(totalScore);
+    $("#totalscore-text").text(totalScore);
+
+});
+
+$("#orangecrystal").on('click', function() {
+    totalScore = totalScore + orangeGem;
+    if (totalScore === randomChoice) {
+        wins++;
+        alert("You got it!");
+        startGame();
+    } else if (totalScore > randomChoice) {
+        losses++;
+        alert("You lose!");
+        startGame();
+    };
+    console.log(totalScore);
+    $("#totalscore-text").text(totalScore);
+
+});
+
+$("#purplecrystal").on('click', function() {
+    totalScore = totalScore + purpleGem;
+    if (totalScore === randomChoice) {
+        wins++;
+        alert("You got it!");
+        startGame();
+    } else if (totalScore > randomChoice) {
+        losses++;
+        alert("You lose!");
+        startGame();
+    };
+    console.log(totalScore);
+
+    $("#totalscore-text").text(totalScore);
+
+})
+*/
+
 
 console.log(randomChoice);
 console.log(redGem);
 console.log(greenGem);
 console.log(orangeGem);
 console.log(purpleGem);
+console.log(totalScore);
